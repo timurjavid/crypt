@@ -1,0 +1,105 @@
+# This is the command line interface file to be used for the notes application.
+# This file is used by cargo crate "clap"
+name: Notes App
+version: "1.0"
+author: Timur J.
+about: Encrypted Notes Application
+args:
+    - save:
+        short: s
+        long: save
+        help: Save to filename provided.
+        takes_value: false
+    - load:
+        short: l
+        long: load
+        help: Load from filename provided.
+        takes_value: false
+    - PASSWORD:
+        short: p
+        long: pass
+        help: Password used to encrypt/decrypt file.
+        required: true
+        takes_value: true
+    - FILENAME:
+        short: f
+        long: filename
+        help: Filename to save/load from.
+        takes_value: true
+    - INPUT:
+        short: i
+        long: input
+        help: Input string to save to file.
+        takes_value: true
+    - TASK:
+        short: t
+        long: task
+        help: Task name to add to file.
+        takes_value: true
+    - SUBTASK:
+        long: subtask
+        help: Subtask name to add to TASK, with status TASK_COMPLETE.
+        takes_value: true
+    - TASK_COMPLETE:
+        short: c
+        long: task-complete
+        help: If task is complete or not (Y/N).
+        takes_value: true
+    - TRACK:
+        short: r
+        long: track
+        help: Tracker name to add to file.
+        takes_value: true
+    - TRACK_DATA:
+        short: d
+        long: track-data
+        help: Data to add to tracker.
+        takes_value: true
+    - TAG:
+        long: tag
+        help: Tag to add to note.
+        takes_value: true
+    - TIMER:
+        long: timer
+        help: Time in minutes to self-destruct the note.
+        takes_value: true
+    - SEARCH:
+        long: search
+        help: Search term to find in files. Search only works if files have the same password.
+        takes_value: true
+    - FILTER_TAG:
+        long: filter-tag
+        help: Search files by tag. Search only works if files have the same password.
+        takes_value: true
+    - FILTER_TASK:
+        long: filter-task
+        help: Search files by task. Search only works if files have the same password.
+        takes_value: true
+    - FILTER_TIME_START:
+        long: filter-time-start
+        help: Search files by time edited. Format needs to be "YYYY-MM-DD HH:MM:SS". This is the start of the time range. Search only works if files have the same password.
+        takes_value: true
+    - FILTER_TIME_END:
+        long: filter-time-end
+        help: Search files by time edited. Format needs to be "YYYY-MM-DD HH:MM:SS". This is the end of the time range. Search only works if files have the same password.
+        takes_value: true
+    - TASK_STAT:
+        long: task-stat
+        help: Return completion times of tasks in all files. Search only works if files have the same password.
+        takes_value: false
+    - TRACKER_STAT:
+        long: tracker-stat
+        help: Return tracker stats in all files. Search only works if files have the same password.
+        takes_value: false
+    - TRACKER_STAT_START:
+        long: tracker-stat-start
+        help: Tracker stats starting time. Format needs to be "YYYY-MM-DD HH:MM:SS". This is the start of the time range. Search only works if files have the same password.
+        takes_value: true
+    - TRACKER_STAT_END:
+        long: tracker-stat-end
+        help: Tracker stats ending time. Format needs to be "YYYY-MM-DD HH:MM:SS". This is the end of the time range. Search only works if files have the same password.
+        takes_value: true
+    - ADVANCED_STAT:
+        long: advanced-stat
+        help: Get advanced stats for tracker notes like mean, net gain/loss, and median. Search only works if files have the same password.
+        takes_value: false
