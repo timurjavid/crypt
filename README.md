@@ -19,7 +19,7 @@ After you have these installed, you can simply run `cargo build --bin notes`, an
 
 # Motivation
 
-This project is final project in CS242 Spring 2021.
+This project started out as the final project for CS 242 Spring 2021 at UIUC. This is the continuation of that project.
 
 While there are different apps for keeping track of notes and tasks, none of them provide all of the functionality that we would like in a single package. Moreover, notes are often stored by large companies like Google, and privacy is not maintained. The goal is to eventually provide perfect forward secrecy with all notes utilizing the Signal Protocol and allow notes to be transferred to other devices. 
 
